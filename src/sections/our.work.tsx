@@ -41,11 +41,11 @@ const ProjectsSlider = () => {
   const animateObject = (i: number) => {
     if (isSmall)
       return selected != i
-        ? { width: "8.333333%", opacity: 0.6 }
-        : { width: "75%", opacity: 1 };
+        ? { width: "8.333333%", height: "100%", opacity: 0.6 }
+        : { width: "75%", height: "100%", opacity: 1 };
     else
       return selected != i
-        ? { height: "10vh", width: "100%", opacity: 0.6 }
+        ? { height: "10%", width: "100%", opacity: 0.6 }
         : { height: "100%", width: "100%", opacity: 1 };
   };
 
@@ -69,10 +69,10 @@ const ProjectsSlider = () => {
           <motion.span
             key={slectedProject.title}
             animate={{
-              opacity: 1,
+              opacity: [0, 1],
               transition: { duration: 0.3 },
             }}
-            className=" text-[64px] lg:text-[128px] font-bold leading-[64px] lg:leading-[120px]"
+            className=" text-[44px] lg:text-[128px] font-bold leading-[44px] lg:leading-[120px]"
           >
             {slectedProject.title}
           </motion.span>
@@ -83,7 +83,7 @@ const ProjectsSlider = () => {
             key={Date.now()}
             animate={{
               filter: ["blur(0px)", "blur(20px)", "blur(0px)"],
-              opacity: [1, 0.9, 1],
+              opacity: !isSmall ? [1, 0.9, 1] : 1,
               transition: { duration: 0.3 },
             }}
           >
@@ -92,7 +92,7 @@ const ProjectsSlider = () => {
           <span>Select The Work</span>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col space-y-0 space-x-0 w-full divide-y-3 lg:divide-y-0 lg:divide-x-3 divide-white aspect-square lg:aspect-[16/6] ">
+      <div className="flex lg:flex-row flex-col space-y-0 space-x-0 w-full divide-y-3 lg:divide-y-0 lg:divide-x-3 divide-white aspect-square lg:aspect-[16/6] overflow-hidden ">
         {projects.map((e, i) => (
           <motion.div
             key={i}
@@ -114,23 +114,27 @@ const ProjectsSlider = () => {
 
 export default () => {
   return (
-    <div className="dark text-foreground w-full bg-black py-32 ">
-      <div className="flex flex-col items-center justify-center space-y-20">
-        <div className="flex flex-col md:flex-row justify-between items-start w-full p-5 md:p-20 space-y-10 md:space-y-0">
-          <div className="flex justify-center items-center space-x-2 min-w-40">
-            <div className="bg-white h-4 w-4" />
-            <span>OUR WORK</span>
-            <ArrowDownRight />
+    <div className="w-full bg-black flex justify-center items-center">
+      <div className="dark text-foreground flex justify-center items-center max-w-9xl w-full">
+        <div className="w-ful py-32 ">
+          <div className="flex flex-col items-center justify-center space-y-20">
+            <div className="flex flex-col md:flex-row justify-between items-start w-full p-5 md:p-20 space-y-10 md:space-y-0">
+              <div className="flex justify-center items-center space-x-2 min-w-40">
+                <div className="bg-white h-4 w-4" />
+                <span>OUR WORK</span>
+                <ArrowDownRight />
+              </div>
+              <span className="md:text-right max-w-xl text-sm">
+                At Kaidō, we're a team of creative professionals dedicated to
+                helping businesses thrive in today's fast-paced digital
+                landscape. Our expertise lies in crafting innovative marketing
+                and design solutions that captivate audiences, drive engagement,
+                and ultimately, drive results.
+              </span>
+            </div>
+            <ProjectsSlider />
           </div>
-          <span className="md:text-right max-w-xl text-sm">
-            At Kaidō, we're a team of creative professionals dedicated to
-            helping businesses thrive in today's fast-paced digital landscape.
-            Our expertise lies in crafting innovative marketing and design
-            solutions that captivate audiences, drive engagement, and
-            ultimately, drive results.
-          </span>
         </div>
-        <ProjectsSlider />
       </div>
     </div>
   );
