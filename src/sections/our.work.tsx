@@ -1,9 +1,9 @@
-import { ArrowDownRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@nextui-org/react";
 import { Image } from "../components/image";
 import { useMediaQuery } from "usehooks-ts";
+import SectionTitle from "../components/section.title";
 
 const projects = [
   {
@@ -116,14 +116,10 @@ export default () => {
   return (
     <div className="w-full bg-black flex justify-center items-center">
       <div className="dark text-foreground flex justify-center items-center max-w-9xl w-full">
-        <div className="w-ful py-32 ">
+        <div className="w-full py-32 ">
           <div className="flex flex-col items-center justify-center space-y-20">
             <div className="flex flex-col md:flex-row justify-between items-start w-full p-5 md:p-20 space-y-10 md:space-y-0">
-              <div className="flex justify-center items-center space-x-2 min-w-40">
-                <div className="bg-white h-4 w-4" />
-                <span>OUR WORK</span>
-                <ArrowDownRight />
-              </div>
+              <SectionTitle title="OUR WORK" color="white" />
               <span className="md:text-right max-w-xl text-sm">
                 At Kaidō, we're a team of creative professionals dedicated to
                 helping businesses thrive in today's fast-paced digital
