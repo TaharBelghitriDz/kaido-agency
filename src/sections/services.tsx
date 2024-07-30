@@ -17,7 +17,7 @@ const ServicesList = () => {
           className="w-full flex justify-between items-center p-10 lg:p-20  cursor-pointer"
         >
           <span>0{i + 1}/</span>
-          <span className="w-full text-right text-2xl lg:text-7xl mr-5 md:mr-32 font-medium md:font-semibold">
+          <span className="w-full text-right md:text-2xl lg:text-7xl mr-5 md:mr-32 font-medium md:font-semibold">
             {e}
           </span>
           <span>[open]</span>
