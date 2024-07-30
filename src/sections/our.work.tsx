@@ -45,8 +45,8 @@ const ProjectsSlider = () => {
         : { width: "75%", height: "100%", opacity: 1 };
     else
       return selected != i
-        ? { height: "10%", width: "100%", opacity: 0.6 }
-        : { height: "100%", width: "100%", opacity: 1 };
+        ? { height: "15%", width: "100%", opacity: 0.6 }
+        : { height: "80%", width: "100%", opacity: 1 };
   };
 
   return (
@@ -92,7 +92,7 @@ const ProjectsSlider = () => {
           <span>Select The Work</span>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col space-y-0 space-x-0 w-full divide-y-3 lg:divide-y-0 lg:divide-x-3 divide-white aspect-square lg:aspect-[16/6] overflow-hidden ">
+      <div className="flex lg:flex-row flex-col space-y-0 space-x-0 w-full divide-y-3 lg:divide-y-0 lg:divide-x-3 divide-white aspect-square lg:aspect-[15/5] overflow-hidden ">
         {projects.map((e, i) => (
           <motion.div
             key={i}

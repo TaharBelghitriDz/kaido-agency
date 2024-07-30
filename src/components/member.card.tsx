@@ -9,15 +9,6 @@ type Member = {
   study: string;
 };
 
-const partenrs = [
-  "https://cdn.brandfetch.io/dribbble.com/w/820/h/820/symbol",
-  "https://cdn.brandfetch.io/apple.com/w/800/h/978/logo",
-  "https://cdn.brandfetch.io/shopify.com/w/820/h/926/symbol",
-  "https://cdn.brandfetch.io/reddit.com/w/820/h/820/symbol",
-  "https://cdn.brandfetch.io/figma.com/w/820/h/1230/symbol",
-  "https://cdn.brandfetch.io/wise.com/w/400/h/400",
-];
-
 export default (props: { Members: Member[] }) => {
   return (
     <InfinityScroll>

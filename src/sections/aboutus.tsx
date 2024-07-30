@@ -53,20 +53,6 @@ export default () => {
                 ))}
               </span>
             </div>
-            {/* <InfinityScroll>
-              {partenrs.map((e) => (
-                <div
-                  key={e}
-                  className="flex justify-center items-center h-40 w-40 lg:h-64 lg:w-64 border-[1px] border-black cursor-pointer"
-                >
-                  <img
-                    src={e}
-                    alt=""
-                    className="h-16 w-16  lg:w-32 lg:h-32 object-contain "
-                  />
-                </div>
-              ))}
-            </InfinityScroll> */}
             <Video />
             <div className="flex flex-col justify-center items-center space-y-20">
               <div className="flex flex-col space-y-5 items-center text-xl font-medium ">
