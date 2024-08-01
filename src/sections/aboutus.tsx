@@ -45,7 +45,7 @@ export default () => {
                 <span>WHO WE ARE</span>
                 <Triangle fill="black" className="rotate-180 rounded-non" />
               </div>
-              <span className="p-5 text-lg md:text-3xl max-w-5xl space-x-3   ">
+              <span className="p-5 text-md md:text-3xl max-w-5xl gap-2 flex flex-wrap  ">
                 {whoweareText.map((e, i) => (
                   <span key={i} className={(i + 1) % 2 == 0 ? "font-bold" : ""}>
                     {e}
@@ -54,12 +54,12 @@ export default () => {
               </span>
             </div>
             <Video />
-            <div className="flex flex-col justify-center items-center space-y-20">
+            <div className="flex flex-col justify-center items-center gap-20">
               <div className="flex flex-col space-y-5 items-center text-xl font-medium ">
                 <span>WHY US</span>
                 <Triangle fill="black" className="rotate-180 rounded-non" />
               </div>
-              <span className="p-5 text-lg md:text-3xl max-w-5xl space-x-3   ">
+              <span className="p-5 text-md md:text-3xl max-w-5xl gap-2 flex flex-wrap ">
                 {whyUs.map((e, i) => (
                   <span key={i} className={(i + 1) % 2 == 0 ? "font-bold" : ""}>
                     {e}
