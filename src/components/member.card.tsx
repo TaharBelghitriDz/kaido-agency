@@ -12,9 +12,9 @@ type Member = {
 export default (props: { Members: Member[] }) => {
   return (
     <InfinityScroll>
-      {props.Members.map((e) => (
+      {props.Members.map((e, i) => (
         <div
-          key={e.address}
+          key={e.address + i * Math.random() * 2827}
           className="relative p-10 flex flex-col justify-center items-start border-[1px] border-black cursor-pointer space-y-5"
         >
           <div className="flex justify-between items-center w-56">

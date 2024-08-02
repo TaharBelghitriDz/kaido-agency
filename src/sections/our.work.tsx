@@ -10,25 +10,25 @@ const projects = [
     title: "SPRING",
     subtitle: "Making your shopping experience safe and fun.",
     link: "https://google.com",
-    cover: "https://random-image-pepebigotes.vercel.app/api/random-image",
+    cover: "/Website-Design-Kaido-2/Frame 2.png",
   },
   {
     title: "CREATSY",
     subtitle: "Making your shopping experience safe and fun.",
     link: "https://google.com",
-    cover: "https://random-image-pepebigotes.vercel.app/api/random-image",
+    cover: "/Website-Design-Kaido-2/Frame 3.png",
   },
   {
     title: "Spring",
     subtitle: "Making your shopping experience safe and fun.",
     link: "https://google.com",
-    cover: "https://random-image-pepebigotes.vercel.app/api/random-image",
+    cover: "/Website-Design-Kaido-2/Frame 26.png",
   },
   {
     title: "CREATSY",
     subtitle: "Making your shopping experience safe and fun.",
     link: "https://google.com",
-    cover: "https://random-image-pepebigotes.vercel.app/api/random-image",
+    cover: "/Website-Design-Kaido-2/WhatsApp Image 2024-08-01 at 22.36.50.jpeg",
   },
 ].map((e, i) => ({ ...e, id: i }));
 

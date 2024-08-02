@@ -8,6 +8,7 @@ import {
   Triangle,
 } from "lucide-react";
 import MenuSite from "../components/menu.site";
+import ContactUsPopover from "../components/contact.us.popover";
 
 const MenuIcon = (props: Record<string, any>) => (
   <svg
@@ -29,14 +30,16 @@ const MenuIcon = (props: Record<string, any>) => (
 
 export default () => {
   const discloser = useDisclosure();
+  const contactUsDiscloser = useDisclosure();
 
   return (
     <div className="w-full  flex justify-center items-center">
       <MenuSite {...discloser} />
+      <ContactUsPopover {...contactUsDiscloser} />
       <div className="flex justify-center items-center max-w-9xl w-full">
         <div className="lg:flex w-full p-0 max-w-[3000px] divide-x-1 divide-black ">
           <div className="relative grid grid-rows-2 w-0 overflow-hidden h-0 lg:h-auto lg:w-1/3 max-w-xs  ">
-            <div className="relative row-span-1 flex overflow-hidden aspect-[10/15] bg-green-950">
+            <div className="relative row-span-1 flex overflow-hidden aspect-[10/15]">
               <img src="/left.pic.png" className="w-full h-full" />
               <MenuIcon
                 onClick={discloser.onOpen}
@@ -53,8 +56,9 @@ export default () => {
                 variant="bordered"
                 radius="full"
                 size="lg"
+                onClick={contactUsDiscloser.onOpen}
               >
-                Book a Call
+                Join Us
               </Button>
             </div>
           </div>
@@ -91,6 +95,7 @@ export default () => {
                   radius="none"
                   variant="light"
                   endContent={<Plus size={20} />}
+                  onClick={contactUsDiscloser.onOpen}
                 >
                   CONTACT
                 </Button>
@@ -119,6 +124,7 @@ export default () => {
                 variant="bordered"
                 radius="full"
                 size="lg"
+                onClick={contactUsDiscloser.onOpen}
               >
                 Start a Project
               </Button>

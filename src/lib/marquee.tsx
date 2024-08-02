@@ -17,11 +17,13 @@ export default function Marquee({
   children,
   vertical = false,
   repeat = 4,
+  key = "",
   ...props
 }: MarqueeProps) {
   return (
     <div
       {...props}
+      key={Math.random() * 76237}
       className={cn(
         "group flex overflow-hidden [--duration:40s] [--gap:0px] ",
         {
@@ -35,7 +37,7 @@ export default function Marquee({
         .fill(0)
         .map((_, i) => (
           <div
-            key={i}
+            key={i * Date.now()}
             className={cn(
               "flex shrink-0 justify-around gap-0 space-y-0 space-x-0 p-0 m-0",
               {
