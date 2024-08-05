@@ -1,4 +1,4 @@
-import { Button, useDisclosure } from "@nextui-org/react";
+import { Button, Link, useDisclosure } from "@nextui-org/react";
 import {
   ArrowRight,
   Instagram,
@@ -52,13 +52,15 @@ export default () => {
               <span />
               <span className="rotate-[270deg] ">Unlock Your Potential.</span>
               <Button
+                as={Link}
+                href="https://cal.com/kaido-agency"
                 className="border-black"
                 variant="bordered"
                 radius="full"
                 size="lg"
-                onClick={contactUsDiscloser.onOpen}
+                target="_blank"
               >
-                Join Us
+                Book a Call
               </Button>
             </div>
           </div>

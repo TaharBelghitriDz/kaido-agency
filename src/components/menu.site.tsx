@@ -1,5 +1,6 @@
 import {
   Button,
+  Link,
   Modal,
   ModalBody,
   ModalContent,
@@ -38,22 +39,31 @@ export default ({ isOpen, onClose }: UseDisclosureProps) => {
                     Unlock Your Potential.
                   </span>
                   <Button
+                    as={Link}
+                    href="https://cal.com/kaido-agency"
                     className="border-white w-full"
                     variant="bordered"
                     radius="full"
                     size="lg"
-                    onClick={contactUsDiscloser.onOpen}
+                    target="_blank"
                   >
-                    Join Us
+                    Book a Call
                   </Button>
                 </div>
               </div>
               <div className="w-full min-h-screen lg:w-2/3 flex flex-col justify-between items-center gap-20 p-10 pt-0">
-                <img
-                  src="/kaido.logo.white.png"
-                  className="max-h-32 max-w-32 lg:max-w-60 w-auto lg:max-h-auto"
-                />
-                <div className="flex flex-col gap-10 text-7xl font-bold items-center text-center">
+                <div className="flex lg:flex-col justify-between items-center w-full gap-10 ">
+                  <img
+                    src="/kaido.logo.white.png"
+                    className="max-h-32 max-w-32 lg:max-w-60 w-auto lg:max-h-auto"
+                  />
+                  <X
+                    onClick={onClose}
+                    size={40}
+                    className="lg:invisible  lg:h-0 lg:overflow-hidden cursor-pointer p-2 border-1 border-white rounded-full "
+                  />
+                </div>
+                <div className="flex flex-col gap-10 text-xl md:text-5xl lg:text-7xl font-semibold md:font-bold items-center text-center">
                   <span className="cursor-pointer">SERVICES</span>
                   <span className="cursor-pointer">HOME</span>
                   <span className="cursor-pointer">KAIDŌ & CO.</span>
